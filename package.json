@@ -1,0 +1,27 @@
+{
+  "name": "Janus-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onuar/Janus-engine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onuar/Janus-engine/issues"
+  },
+  "homepage": "https://github.com/onuar/Janus-engine#readme",
+  "dependencies": {
+    "@types/node": "^7.0.12",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}
