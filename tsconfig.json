@@ -1,9 +1,26 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
         "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false,
-        "typeRoots": ["node_modules/@types"]
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "types": [
+            "reflect-metadata"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": false,
+        "noResolve": false,
+        "noUnusedParameters": false,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     }
 }
