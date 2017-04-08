@@ -3,12 +3,15 @@ import { injectable } from 'inversify';
 
 @injectable()
 class BattleField implements Battle {
-    constructor() {
-
+    attackToHero1(): void {
+        console.log("hero 1 is attacked");
+    }
+    attackToHero2(): void {
+        console.log("hero 2 is attacked");
     }
 
-    public attack() {
-        console.log("attacked");
+    constructor() {
+
     }
 }
 

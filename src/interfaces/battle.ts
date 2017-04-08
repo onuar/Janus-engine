@@ -1,5 +1,7 @@
 interface Battle {
-    attack(): void;
+    attackToHero1(): void;
+    
+    attackToHero2(): void;
 }
 
 export default Battle; 
