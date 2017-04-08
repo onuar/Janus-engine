@@ -1,9 +1,9 @@
-import AttackToCard from './attacktocard_base';
-import AttackToHero from './attacktohero_base';
+import AttackToCardContext from './attacktocard_base';
+import AttackToHeroContext from './attacktohero_base';
 
 interface Battle {
-    attack(context: AttackToCard): void;
-    attackToHero(context:AttackToHero): void;
+    attack(context: AttackToCardContext): void;
+    attackToHero(context:AttackToHeroContext): void;
 }
 
 export default Battle; 

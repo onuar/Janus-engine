@@ -1,7 +1,7 @@
 import CardBase from './card_base';
 
-interface AttackToHero {
+interface AttackToHeroContext {
     attackerCard: CardBase;
 }
 
-export default AttackToHero;
+export default AttackToHeroContext;
