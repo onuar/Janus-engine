@@ -24,6 +24,7 @@
     "nodemon": "^1.11.0",
     "reflect-metadata": "^0.1.10",
     "ts-node": "^3.0.2",
+    "typemoq": "^1.4.1",
     "typescript": "^2.2.2"
   }
 }
