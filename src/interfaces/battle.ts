@@ -2,8 +2,11 @@ import AttackToCardContext from './attacktocard_base';
 import AttackToHeroContext from './attacktohero_base';
 
 interface Battle {
-    attack(context: AttackToCardContext): void;
-    attackToHero(context:AttackToHeroContext): void;
+    attackToHero(context: AttackToHeroContext): void;
+    
+    attackToCard(context: AttackToCardContext): void;
+    
+    turn(): void;
 }
 
 export default Battle; 
