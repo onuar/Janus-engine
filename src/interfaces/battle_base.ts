@@ -15,6 +15,10 @@ abstract class BattleBase implements Battle {
         this.waitingFor = hero1;
     }
 
+    start(): void {
+
+    }
+
     attackToHero(context: AttackToHeroContext): void {
         this.attackToHeroTemplate(context);
         this.turn();
@@ -24,14 +28,33 @@ abstract class BattleBase implements Battle {
         this.turn();
     }
 
-    protected abstract attackToHeroTemplate(context: AttackToHeroContext): void;
-
-    protected abstract attackToCardTemplate(context: AttackToCardContext): void;
-
     turn(): void {
         this.waitingFor = this.waitingFor == this.hero1 ? this.hero2 : this.hero1;
         console.log("waiting for " + this.waitingFor.user.name);
     }
+
+    checkGame(): void {
+        if (this.hero1.health <= 0) {
+            console.log("hero 2 won");
+            this.end();
+        } else if (this.hero2.health <= 0) {
+            console.log("hero 1 won");
+            this.end();
+        } else if ((this.hero1.droppedCards.Count() == 0 && this.hero1.holdCards.Count() == 0)
+            || (this.hero2.droppedCards.Count() == 0 && this.hero2.holdCards.Count() == 0)) {
+            console.log("there is no winner");
+            this.end();
+        }
+    }
+
+    end(): void {
+        console.log("game is over.");
+    }
+
+    protected abstract attackToHeroTemplate(context: AttackToHeroContext): void;
+
+    protected abstract attackToCardTemplate(context: AttackToCardContext): void;
+
 }
 
 export default BattleBase;
