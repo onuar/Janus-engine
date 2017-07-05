@@ -20,7 +20,7 @@ abstract class BattleBase implements Battle {
     }
 
     attackToHero(context: AttackToHeroContext): void {
-        this.attackToHeroTemplate(context);
+        this.attackToHeroTemplate(context, this.waitingFor);
         this.turn();
     }
     attackToCard(context: AttackToCardContext): void {
@@ -51,7 +51,7 @@ abstract class BattleBase implements Battle {
         console.log("game is over.");
     }
 
-    protected abstract attackToHeroTemplate(context: AttackToHeroContext): void;
+    protected abstract attackToHeroTemplate(context: AttackToHeroContext, attacked: HeroBase): void;
 
     protected abstract attackToCardTemplate(context: AttackToCardContext): void;
 

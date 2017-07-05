@@ -12,7 +12,7 @@ class BattleField extends BattleBase {
         super(hero1, hero2);
     }
 
-    protected attackToHeroTemplate(context: AttackToHeroContext): void {
+    protected attackToHeroTemplate(context: AttackToHeroContext, attacked: HeroBase): void {
         console.log("hero is attacked");
     }
     protected attackToCardTemplate(context: AttackToCardContext): void {

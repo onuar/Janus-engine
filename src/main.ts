@@ -11,6 +11,7 @@ import User from './entities/user';
 
 // let attackCardMock: TypeMoq.IMock<AttackToCardContext> = TypeMoq.Mock.ofType<AttackToCardContext>();
 let attackHeroMock: TypeMoq.IMock<AttackToHeroContext> = TypeMoq.Mock.ofType<AttackToHeroContext>();
+let attackCardMock: TypeMoq.IMock<AttackToCardContext> = TypeMoq.Mock.ofType<AttackToCardContext>();
 
 //with ioc
 // var battleField = container.get<Battle>(TYPES.Battle);
@@ -28,3 +29,5 @@ hero2.setup(_ => _.user).returns(() => user2);
 
 var battleField = new BattleField(hero1.object, hero2.object);
 battleField.attackToHero(attackHeroMock.object);
+battleField.attackToHero(attackHeroMock.object);
+battleField.attackToCard(attackCardMock.object);
